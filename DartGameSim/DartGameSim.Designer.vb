@@ -31,6 +31,10 @@ Partial Class DartGameSim
         '
         'DartBoardPictureBox
         '
+        Me.DartBoardPictureBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DartBoardPictureBox.BackColor = System.Drawing.SystemColors.ButtonShadow
         Me.DartBoardPictureBox.Location = New System.Drawing.Point(12, 12)
         Me.DartBoardPictureBox.Name = "DartBoardPictureBox"
         Me.DartBoardPictureBox.Size = New System.Drawing.Size(1180, 607)
@@ -39,6 +43,7 @@ Partial Class DartGameSim
         '
         'ReviewButton
         '
+        Me.ReviewButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ReviewButton.BackColor = System.Drawing.SystemColors.Info
         Me.ReviewButton.Location = New System.Drawing.Point(12, 644)
         Me.ReviewButton.Name = "ReviewButton"
@@ -49,6 +54,7 @@ Partial Class DartGameSim
         '
         'StartRoundButton
         '
+        Me.StartRoundButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.StartRoundButton.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.StartRoundButton.Location = New System.Drawing.Point(546, 644)
         Me.StartRoundButton.Name = "StartRoundButton"
@@ -59,6 +65,7 @@ Partial Class DartGameSim
         '
         'ExitButton
         '
+        Me.ExitButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ExitButton.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.ExitButton.Location = New System.Drawing.Point(1080, 644)
         Me.ExitButton.Name = "ExitButton"
@@ -77,7 +84,7 @@ Partial Class DartGameSim
         Me.Controls.Add(Me.ReviewButton)
         Me.Controls.Add(Me.DartBoardPictureBox)
         Me.Name = "DartGameSim"
-        Me.Text = "Form1"
+        Me.Text = "DartGameSim"
         CType(Me.DartBoardPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
