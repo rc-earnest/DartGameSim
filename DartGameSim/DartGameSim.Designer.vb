@@ -22,10 +22,14 @@ Partial Class DartGameSim
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.DartBoardPictureBox = New System.Windows.Forms.PictureBox()
         Me.ReviewButton = New System.Windows.Forms.Button()
         Me.StartRoundButton = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
+        Me.RoundLabel = New System.Windows.Forms.Label()
+        Me.DartCountLabel = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.DartBoardPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -40,6 +44,7 @@ Partial Class DartGameSim
         Me.DartBoardPictureBox.Size = New System.Drawing.Size(1180, 607)
         Me.DartBoardPictureBox.TabIndex = 0
         Me.DartBoardPictureBox.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.DartBoardPictureBox, "Dart Board for displaying thrown darts")
         '
         'ReviewButton
         '
@@ -50,6 +55,7 @@ Partial Class DartGameSim
         Me.ReviewButton.Size = New System.Drawing.Size(112, 42)
         Me.ReviewButton.TabIndex = 1
         Me.ReviewButton.Text = "&Review"
+        Me.ToolTip1.SetToolTip(Me.ReviewButton, "click to open review mode")
         Me.ReviewButton.UseVisualStyleBackColor = False
         '
         'StartRoundButton
@@ -61,6 +67,7 @@ Partial Class DartGameSim
         Me.StartRoundButton.Size = New System.Drawing.Size(112, 42)
         Me.StartRoundButton.TabIndex = 2
         Me.StartRoundButton.Text = "Start& Round"
+        Me.ToolTip1.SetToolTip(Me.StartRoundButton, "Click to start the next round")
         Me.StartRoundButton.UseVisualStyleBackColor = False
         '
         'ExitButton
@@ -72,13 +79,36 @@ Partial Class DartGameSim
         Me.ExitButton.Size = New System.Drawing.Size(112, 42)
         Me.ExitButton.TabIndex = 3
         Me.ExitButton.Text = "E&xit"
+        Me.ToolTip1.SetToolTip(Me.ExitButton, "click to exit the simulator")
         Me.ExitButton.UseVisualStyleBackColor = False
+        '
+        'RoundLabel
+        '
+        Me.RoundLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.RoundLabel.AutoSize = True
+        Me.RoundLabel.Location = New System.Drawing.Point(693, 644)
+        Me.RoundLabel.Name = "RoundLabel"
+        Me.RoundLabel.Size = New System.Drawing.Size(53, 16)
+        Me.RoundLabel.TabIndex = 4
+        Me.RoundLabel.Text = "Round: "
+        '
+        'DartCountLabel
+        '
+        Me.DartCountLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.DartCountLabel.AutoSize = True
+        Me.DartCountLabel.Location = New System.Drawing.Point(693, 670)
+        Me.DartCountLabel.Name = "DartCountLabel"
+        Me.DartCountLabel.Size = New System.Drawing.Size(89, 16)
+        Me.DartCountLabel.TabIndex = 5
+        Me.DartCountLabel.Text = "Darts Thrown:"
         '
         'DartGameSim
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1204, 698)
+        Me.Controls.Add(Me.DartCountLabel)
+        Me.Controls.Add(Me.RoundLabel)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.StartRoundButton)
         Me.Controls.Add(Me.ReviewButton)
@@ -87,6 +117,7 @@ Partial Class DartGameSim
         Me.Text = "DartGameSim"
         CType(Me.DartBoardPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -94,4 +125,7 @@ Partial Class DartGameSim
     Friend WithEvents ReviewButton As Button
     Friend WithEvents StartRoundButton As Button
     Friend WithEvents ExitButton As Button
+    Friend WithEvents RoundLabel As Label
+    Friend WithEvents DartCountLabel As Label
+    Friend WithEvents ToolTip1 As ToolTip
 End Class
